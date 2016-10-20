@@ -14,21 +14,11 @@ class Crawler
     begin
       @conf = Config.load
       @log = Log.new
-      self.get() #Get Trade Lists
-      self.parse() #Parse By HTML
-      self.collect() #Collection The Entries
-      return
-
       while (true)
         sleep 5
         self.get() #Get Trade Lists
         self.parse() #Parse By HTML
         self.collect() #Collection The Entries
-
-        #新しく追加された記事だけ抽出
-        #検索ワードにマッチする記事だけ抽出
-        #とりあえずロガーに出す
-        #TODO: 指定されているアダプタからSNS通知
       end
     rescue Interrupt
       puts "Processing was interrupted! Bye(=w=)"
