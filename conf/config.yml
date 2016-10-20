@@ -1,0 +1,9 @@
+http:
+  base_url: http://mabinogi.nexon.co.jp
+  trade_url: /community/tradeBoardList.asp?sv=
+  #Target Severs[ma|ru|ta]
+  target_server: ta
+
+db:
+  host: localhost:27017
+  database: kipit-crawler
