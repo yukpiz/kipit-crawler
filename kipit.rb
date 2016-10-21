@@ -24,7 +24,7 @@ threads.push(Thread.new do
   cache_ids = []
 
   while (true)
-    sleep 5
+    sleep 10
     cached_count = 0
 
     #Get the html
@@ -63,7 +63,7 @@ Thread.new do
   end
 end
 
-#Observer thread
+#Entry observer thread
 Thread.new do
   while (true)
     sleep 1
@@ -71,6 +71,10 @@ Thread.new do
     log.info "Observerが検知しました"
     #キーワード検索
   end
+end
+
+#Twitter observer thread
+Thread.new do
 end
 
 begin
