@@ -37,6 +37,7 @@ class Parser
         type = "販売" if src.match(/icn_trade_sell\.gif/)
         type = "買取" if src.match(/icn_trade_buy\.gif/)
         type = "交換" if src.match(/icn_trade_barter\.gif/)
+        type = "その他" if src.match(/icn_trade_other\.gif/)
         entry["type"] = type
       end
       #Entry Created At
