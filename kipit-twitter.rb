@@ -2,7 +2,7 @@ require "./core/twitter/twitter.rb"
 require "./core/logger/log.rb"
 
 threads = []
-#Twitter observer thread
+#Twitter refollow observer thread
 threads.push(Thread.new do
   twitter = TwitterClient.new
   while (true)
