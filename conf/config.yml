@@ -14,3 +14,9 @@ twitter:
   consumer_secret: TWITTER_CONSUMER_SECRET
   access_token: TWITTER_ACCESS_TOKEN
   access_token_secret: TWITTER_ACCESS_TOKEN_SECRET
+
+  texts:
+    refollow_text: |-
+      はじめましてっ！
+      ムーニャと言います(๑•̀ㅂ•́)و✧
+      + [キーワード]で検索ワードを登録してね(•ө•)♡
