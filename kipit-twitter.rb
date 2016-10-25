@@ -2,6 +2,9 @@ require "./core/twitter/twitter.rb"
 require "./core/logger/log.rb"
 
 threads = []
+#Initialize logger
+log = Log.new
+
 #Twitter refollow observer thread
 threads.push(Thread.new do
   twitter = TwitterClient.new
@@ -20,6 +23,11 @@ EOS
       sleep 10
     end
   end
+end)
+
+#Twitter reply ebserver thread
+threads.push(Thread.new do
+  twitter = TwitterClient.new
 end)
 
 begin

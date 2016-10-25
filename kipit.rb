@@ -45,7 +45,7 @@ threads.push(Thread.new do
     end
 
     cache_ids.sort!
-    cache_ids.delete_at(0) if cache_ids.count > 20
+    cache_ids.delete_at(0) if cache_ids.count > 30
     log.info "#{cached_count}件の記事をキューに格納しました！" if cached_count > 0
   end
 end)
