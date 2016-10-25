@@ -51,7 +51,7 @@ threads.push(Thread.new do
 end)
 
 #Writer thread
-Thread.new do
+threads.push(Thread.new do
   while (true)
     sleep 1
     entry = crawler_queue.pop
@@ -61,21 +61,17 @@ Thread.new do
       observer_queue.push entry
     end
   end
-end
+end)
 
 #Entry observer thread
-Thread.new do
+threads.push(Thread.new do
   while (true)
     sleep 1
     entry = observer_queue.pop
     log.info "Observerが検知しました"
     #キーワード検索
   end
-end
-
-#Twitter observer thread
-Thread.new do
-end
+end)
 
 begin
   threads.each do |t|
